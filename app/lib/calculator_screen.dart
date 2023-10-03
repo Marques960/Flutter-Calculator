@@ -1,8 +1,11 @@
-import 'package:app/button_values.dart';
+
 import 'package:flutter/material.dart';
+import 'package:app/button_values.dart'; // Replace 'app' with the actual package name if needed
+
 
 class CalculatorScreen extends StatefulWidget {
-  const CalculatorScreen({super.key});
+  const CalculatorScreen({Key? key}) : super(key: key);
+
 
   @override
   State<CalculatorScreen> createState() => _CalculatorScreenState();
@@ -32,16 +35,16 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     "$number1$operand$number2".isEmpty
                         ? "0"
                         : "$number1$operand$number2",
-                    style: const TextStyle(
+                    style: const TextStyle (
                       fontSize: 48,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.bold,                    
                     ),
                     textAlign: TextAlign.end,
                   ),
                 ),
               ),
             ),
-
+            
             // buttons
             Wrap(
               children: Btn.buttonValues
